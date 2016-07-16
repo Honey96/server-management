@@ -11,13 +11,13 @@ lout1.close()
 usr="harshit"
 psd="redhat"
 if choice == '1':
-	os.system("dialog --inputbox 'Enter the name of the Admin' 10 30 2>  /root/Desktop/project/admin.txt")
-        lout2=open('/root/Desktop/project/admin.txt','r')
+	os.system("dialog --inputbox 'Enter the name of the Admin' 10 30 2>  /root/Desktop/project1/admin.txt")
+        lout2=open('/root/Desktop/project1/admin.txt','r')
         u=lout2.read()
 	s.sendto(u,("192.168.0.6",1234))
         lout2.close   
-	os.system("dialog --inputbox 'Enter the password of the project' 10 30 2>  /root/Desktop/project/password.txt")
-        lout2=open('/root/Desktop/project/password.txt','r')
+	os.system("dialog --inputbox 'Enter the password of the project' 10 30 2>  /root/Desktop/project1/password.txt")
+        lout2=open('/root/Desktop/project1/password.txt','r')
         p=lout2.read()
 	s.sendto(p,("192.168.0.6",1234))
         lout2.close 
