@@ -6,7 +6,6 @@ time.sleep(2)
 os.system(' dialog --menu "select one" 10 50 2  1 "Enter into my Project" 2 "Exit"  2>/tmp/ch.txt ')
 lout1=open('/tmp/ch.txt')
 choice=lout1.read()
-s.sendto(choice,("192.168.0.6",1234))
 lout1.close()
 usr="harshit"
 psd="redhat"
@@ -14,12 +13,12 @@ if choice == '1':
 	os.system("dialog --inputbox 'Enter the name of the Admin' 10 30 2>  /root/Desktop/project1/admin.txt")
         lout2=open('/root/Desktop/project1/admin.txt','r')
         u=lout2.read()
-	s.sendto(u,("192.168.0.6",1234))
+	s.sendto("admin name is "+u,("192.168.0.6",1234))
         lout2.close   
 	os.system("dialog --inputbox 'Enter the password of the project' 10 30 2>  /root/Desktop/project1/password.txt")
         lout2=open('/root/Desktop/project1/password.txt','r')
         p=lout2.read()
-	s.sendto(p,("192.168.0.6",1234))
+	s.sendto("password is "+p,("192.168.0.6",1234))
         lout2.close 
         os.system('dialog --infobox "Checking details.." 10 30')
 	time.sleep(2)
